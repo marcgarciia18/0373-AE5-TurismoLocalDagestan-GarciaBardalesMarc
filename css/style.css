@@ -5,6 +5,7 @@
 body{
     margin: 2;
     text-align: justify;
+    background-color: beige;
 }
 h1{
     text-align: center;
@@ -24,10 +25,10 @@ div{
 }
 
 .noticias{
-    width: 25%;
+    width: 20%;
 }
 .contenidos{
-    width: 50%;
+    width: 55%;
 
 }
 
@@ -60,7 +61,7 @@ nav a{
 
 
 .noticias{
-    padding-left: 10px;
+    padding-left: 30px;
 }
 
 .noticias img{
@@ -70,4 +71,40 @@ nav a{
 
 .noticias a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .indice, .contenidos, .noticias {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .indice {
+        order: 1;
+    }
+
+    .contenidos {
+        order: 2;
+    }
+
+    .noticias {
+        order: 3;
+    }
+
+    .lugint {
+        flex-direction: column;
+    }
+
+    .lugint article {
+        width: 100%;
+    }
+
+    .noticias img {
+        height: auto;
+    }
 }
