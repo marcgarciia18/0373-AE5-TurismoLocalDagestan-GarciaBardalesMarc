@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -24,6 +27,30 @@ h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.boton-volver-arriba {
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    background-color: #3498db; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+    z-index: 1000; 
+}
+
+.boton-volver-arriba:hover {
+    background-color: #2980b9; /* Cambia el color de fondo al pasar el mouse */
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.boton-volver-arriba:active {
+    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
 }
 
 iframe {
@@ -149,7 +176,7 @@ nav a:hover {
 }
 
 /* Diseño responsivo */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     div {
         display: flex;
         flex-direction: column;
